@@ -1,6 +1,6 @@
 # SkTorrent Batch Torrent Downloader
 
-This Python script automates the batch downloading of `.torrent` files from the SkTorrent website **without being logged in**. <br> 
+This Python script automates the batch downloading of `.torrent` files from the SkTorrent website **without being logged in**.
 It reads a list of torrent detail page URLs from `input.txt`, extracts the actual download links, and saves the `.torrent` files to a folder.
 
 ---
