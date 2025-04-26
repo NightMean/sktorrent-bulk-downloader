@@ -7,10 +7,12 @@ It reads a list of torrent detail page URLs from `input.txt`, extracts the actua
 
 ## Features
 
-- Automatically checks and installs required dependencies (`requests`, `bs4`)
+- Automatically checks and installs required dependencies (`requests`, `bs4`, `tqdm`)
 - Downloads `.torrent` files without cookies
 - Logs all activities and errors to log file
 - Retries failed HTTP requests up to 3 times
+- Parralel downloading via configurable workers (By default set to 1)
+- Removes duplicates URLs from input file
 - Only downloads valid Sktorrent URLs
 - Skips already downloaded files
 - Cleans up filenames to be compatible with most operating systems
