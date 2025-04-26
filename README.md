@@ -33,7 +33,7 @@ It reads a list of torrent detail page URLs from `input.txt`, extracts the actua
 
    You can manually install the dependencies, or let the script install them automatically:
    ```bash
-   pip install requests beautifulsoup4
+   pip install requests beautifulsoup4 tqdm
    ```
 
 3. **Prepare `input.txt`:**
