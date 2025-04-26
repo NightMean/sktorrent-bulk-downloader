@@ -1,15 +1,17 @@
 # SkTorrent Batch Torrent Downloader
 
-This Python script automates the batch downloading of `.torrent` files from the SkTorrent website. 
-It reads a list of torrent detail page URLs from `input.txt`, extracts the actual download links, and saves the `.torrent` files to a local folder.
+This Python script automates the batch downloading of `.torrent` files from the SkTorrent website **without being logged in**. <br> 
+It reads a list of torrent detail page URLs from `input.txt`, extracts the actual download links, and saves the `.torrent` files to a folder.
 
 ---
 
 ## Features
 
 - Automatically checks and installs required dependencies (`requests`, `bs4`)
-- Logs all activities and errors to `download.log`
+- Downloads `.torrent` files without cookies
+- Logs all activities and errors to log file
 - Retries failed HTTP requests up to 3 times
+- Only downloads valid Sktorrent URLs
 - Skips already downloaded files
 - Cleans up filenames to be compatible with most operating systems
 
@@ -18,7 +20,6 @@ It reads a list of torrent detail page URLs from `input.txt`, extracts the actua
 ## Requirements
 
 - Python 3.x
-- Internet access
 
 ---
 
@@ -52,7 +53,7 @@ It reads a list of torrent detail page URLs from `input.txt`, extracts the actua
 ## Output
 
 - Downloaded `.torrent` files will be saved to the `downloaded_files/` folder.
-- A log file named `download.log` will contain detailed activity and error information.
+- A log file will contain detailed activity and error information.
 
 ---
 
@@ -67,7 +68,3 @@ You can change default settings (e.g. download folder, log file name, base URL) 
 - Only links containing a download button with the `title="Stiahnut"` will work.
 - The script skips invalid, broken, or non-SkTorrent links.
 - Empty lines in `input.txt` are ignored.
-
-## Author
-
-*Your Name / GitHub handle here*
